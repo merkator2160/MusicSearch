@@ -35,7 +35,7 @@ namespace MusicSearch.Core.Cache
 			using(var redis = ConnectionMultiplexer.Connect(_config.ConnectionString))
 			{
 				var db = redis.GetDatabase();
-				db.StringSet(key, str, TimeSpan.FromSeconds(_config.DafaultExpirySec));
+				db.StringSet(key, str, expiry);
 			}
 		}
 		public T GetObject<T>(String key)

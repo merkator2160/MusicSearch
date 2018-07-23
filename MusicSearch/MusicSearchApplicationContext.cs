@@ -1,4 +1,5 @@
 ﻿using MusicSearch.Api;
+using MusicSearch.Api.Interfaces;
 using MusicSearch.Core.AutoMapper;
 using MusicSearch.Core.Cache;
 using MusicSearch.Core.Config;
@@ -39,7 +40,7 @@ namespace MusicSearch
 			var container = new UnityContainer();
 
 			container.RegisterType<AlbumSearchForm>();
-			container.RegisterType<IItunesRestClient, ItunesRestClient>();
+			container.RegisterType<IItunesHttpClient, ItunesHttpClient>();
 			container.RegisterType<ISearchService, SearchService>();
 			container.RegisterType<IConfig, ConfigProvider>();
 			container.RegisterType<ICache, RedisCache>();

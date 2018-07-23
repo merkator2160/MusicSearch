@@ -1,6 +1,7 @@
 ﻿using MusicSearch.Services.Interfaces;
 using MusicSearch.Services.Models;
 using System;
+using System.Net.Http;
 using System.Text;
 using System.Windows.Forms;
 
@@ -28,9 +29,13 @@ namespace MusicSearch.Forms
 
 				SearchResultTb.Text = PrepareAlbumsToPrint(albums);
 			}
-			catch (AggregateException ex)
+			catch (HttpRequestException ex)
 			{
 				SearchResultTb.Text = "Sorry but network unavailable and cache is empty!";
+			}
+			catch (ArgumentException ex)
+			{
+				SearchResultTb.Text = "Enter the group name!";
 			}
 			catch (Exception ex)
 			{
