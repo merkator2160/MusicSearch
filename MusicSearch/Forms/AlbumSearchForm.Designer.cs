@@ -30,9 +30,9 @@
 		{
 			this.SearchBtn = new System.Windows.Forms.Button();
 			this.QueryTb = new System.Windows.Forms.TextBox();
-			this.searchResultTb = new System.Windows.Forms.TextBox();
 			this.EnterGroupNameLbl = new System.Windows.Forms.Label();
 			this.AlbumsLbl = new System.Windows.Forms.Label();
+			this.SearchResultTb = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// SearchBtn
@@ -52,14 +52,6 @@
 			this.QueryTb.Size = new System.Drawing.Size(529, 20);
 			this.QueryTb.TabIndex = 1;
 			// 
-			// searchResultTb
-			// 
-			this.searchResultTb.Location = new System.Drawing.Point(12, 79);
-			this.searchResultTb.Multiline = true;
-			this.searchResultTb.Name = "searchResultTb";
-			this.searchResultTb.Size = new System.Drawing.Size(610, 320);
-			this.searchResultTb.TabIndex = 2;
-			// 
 			// EnterGroupNameLbl
 			// 
 			this.EnterGroupNameLbl.AutoSize = true;
@@ -78,14 +70,24 @@
 			this.AlbumsLbl.TabIndex = 4;
 			this.AlbumsLbl.Text = "Albums:";
 			// 
+			// SearchResultTb
+			// 
+			this.SearchResultTb.Location = new System.Drawing.Point(12, 79);
+			this.SearchResultTb.Multiline = true;
+			this.SearchResultTb.Name = "SearchResultTb";
+			this.SearchResultTb.ReadOnly = true;
+			this.SearchResultTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.SearchResultTb.Size = new System.Drawing.Size(610, 320);
+			this.SearchResultTb.TabIndex = 5;
+			// 
 			// AlbumSearchForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(634, 411);
+			this.Controls.Add(this.SearchResultTb);
 			this.Controls.Add(this.AlbumsLbl);
 			this.Controls.Add(this.EnterGroupNameLbl);
-			this.Controls.Add(this.searchResultTb);
 			this.Controls.Add(this.QueryTb);
 			this.Controls.Add(this.SearchBtn);
 			this.MaximumSize = new System.Drawing.Size(650, 450);
@@ -101,9 +103,9 @@
 
 		private System.Windows.Forms.Button SearchBtn;
 		private System.Windows.Forms.TextBox QueryTb;
-		private System.Windows.Forms.TextBox searchResultTb;
 		private System.Windows.Forms.Label EnterGroupNameLbl;
 		private System.Windows.Forms.Label AlbumsLbl;
+		private System.Windows.Forms.TextBox SearchResultTb;
 	}
 }
 

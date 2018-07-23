@@ -108,7 +108,10 @@
     <Compile Include="Api\Models\SearchResponse.cs" />
     <Compile Include="Api\Models\SearchResponseItem.cs" />
     <Compile Include="Api\Models\SearchEntities.cs" />
-    <Compile Include="Config\Models\ItunesConfig.cs" />
+    <Compile Include="Core\AutoMapper\AutoMapperMiddleware.cs" />
+    <Compile Include="Core\Cache\ICache.cs" />
+    <Compile Include="Core\Config\Models\ItunesConfig.cs" />
+    <Compile Include="Core\AutoMapper\Profiles\AlbumProfile.cs" />
     <Compile Include="Forms\AlbumSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,9 +121,9 @@
     <Compile Include="MusicSearchApplicationContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Config\ConfigProvider.cs" />
-    <Compile Include="Config\Interfaces\IConfigProvider.cs" />
-    <Compile Include="Config\Models\RootConfig.cs" />
+    <Compile Include="Core\Config\ConfigProvider.cs" />
+    <Compile Include="Core\Config\IConfig.cs" />
+    <Compile Include="Core\Config\Models\RootConfig.cs" />
     <Compile Include="Services\Interfaces\ISearchService.cs" />
     <Compile Include="Services\Models\AlbumDto.cs" />
     <Compile Include="Services\SearchService.cs" />

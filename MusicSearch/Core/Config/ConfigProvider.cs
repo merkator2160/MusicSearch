@@ -1,9 +1,8 @@
-﻿using MusicSearch.Config.Interfaces;
-using MusicSearch.Config.Models;
+﻿using MusicSearch.Core.Config.Models;
 
-namespace MusicSearch.Config
+namespace MusicSearch.Core.Config
 {
-	public class ConfigProvider : IConfigProvider
+	public class ConfigProvider : IConfig
 	{
 		private static readonly RootConfig _rootConfig;
 

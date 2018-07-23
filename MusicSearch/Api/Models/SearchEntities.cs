@@ -4,14 +4,14 @@ namespace MusicSearch.Api.Models
 {
 	public static class SearchEntities
 	{
-		public static String Movie => "movie";
-		public static String Album => "album";
-		public static String AllArtist => "allArtist";
-		public static String Podcast => "podcast";
-		public static String MusicVideo => "musicVideo";
-		public static String Mix => "mix";
-		public static String Audiobook => "audiobook";
-		public static String TvSeason => "tvSeason";
-		public static String AllTrack => "allTrack";
+		public const String Movie = "movie";
+		public const String Album = "album";
+		public const String AllArtist = "allArtist";
+		public const String Podcast = "podcast";
+		public const String MusicVideo = "musicVideo";
+		public const String Mix = "mix";
+		public const String Audiobook = "audiobook";
+		public const String TvSeason = "tvSeason";
+		public const String AllTrack = "allTrack";
 	}
 }

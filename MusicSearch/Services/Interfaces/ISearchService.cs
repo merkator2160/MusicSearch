@@ -1,10 +1,11 @@
-﻿using MusicSearch.Api.Models;
+﻿using MusicSearch.Services.Models;
+using System;
 using System.Threading.Tasks;
 
 namespace MusicSearch.Services.Interfaces
 {
 	public interface ISearchService
 	{
-		Task<SearchResponse> GetGroupAlbumsAsync();
+		Task<AlbumDto[]> GetGroupAlbumsAsync(String term);
 	}
 }

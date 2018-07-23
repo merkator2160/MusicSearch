@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MusicSearch.Config.Models
+namespace MusicSearch.Core.Config.Models
 {
 	public class ItunesConfig
 	{
