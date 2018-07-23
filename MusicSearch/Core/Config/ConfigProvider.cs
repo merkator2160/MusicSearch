@@ -15,6 +15,11 @@ namespace MusicSearch.Core.Config
 				{
 					ItunesApiSearchUri = "https://itunes.apple.com/search",
 					ItunesApiLookupUri = "https://itunes.apple.com/lookup"
+				},
+				RedisCacheConfig = new RedisCacheConfig()
+				{
+					ConnectionString = "localhost",
+					DafaultExpirySec = 600
 				}
 			};
 		}
@@ -28,6 +33,10 @@ namespace MusicSearch.Core.Config
 		public ItunesConfig GetItunesConfig()
 		{
 			return _rootConfig.ItunesConfig;
+		}
+		public RedisCacheConfig GetRedisCacheConfig()
+		{
+			return _rootConfig.RedisCacheConfig;
 		}
 	}
 }

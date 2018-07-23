@@ -6,5 +6,6 @@ namespace MusicSearch.Core.Config
 	{
 		RootConfig GetRootConfig();
 		ItunesConfig GetItunesConfig();
+		RedisCacheConfig GetRedisCacheConfig();
 	}
 }

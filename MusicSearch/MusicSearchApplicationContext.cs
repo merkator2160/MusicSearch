@@ -1,5 +1,6 @@
 ﻿using MusicSearch.Api;
 using MusicSearch.Core.AutoMapper;
+using MusicSearch.Core.Cache;
 using MusicSearch.Core.Config;
 using MusicSearch.Forms;
 using MusicSearch.Services;
@@ -41,6 +42,7 @@ namespace MusicSearch
 			container.RegisterType<IItunesRestClient, ItunesRestClient>();
 			container.RegisterType<ISearchService, SearchService>();
 			container.RegisterType<IConfig, ConfigProvider>();
+			container.RegisterType<ICache, RedisCache>();
 			container.RegisterInstance(AutoMapperMiddleware.GetConfiguredMapper());
 
 			return container;

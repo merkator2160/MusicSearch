@@ -41,8 +41,12 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.2.6\lib\net46\StackExchange.Redis.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
@@ -110,8 +114,10 @@
     <Compile Include="Api\Models\SearchEntities.cs" />
     <Compile Include="Core\AutoMapper\AutoMapperMiddleware.cs" />
     <Compile Include="Core\Cache\ICache.cs" />
+    <Compile Include="Core\Cache\RedisCache.cs" />
     <Compile Include="Core\Config\Models\ItunesConfig.cs" />
     <Compile Include="Core\AutoMapper\Profiles\AlbumProfile.cs" />
+    <Compile Include="Core\Config\Models\RedisCacheConfig.cs" />
     <Compile Include="Forms\AlbumSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>

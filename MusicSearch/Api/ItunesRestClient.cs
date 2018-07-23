@@ -25,13 +25,10 @@ namespace MusicSearch.Api
 		}
 		public SearchResponse MakeSearchRequest(String term, String searchEntity, Int32 limit)
 		{
-			if(limit < 1 || limit > 200)
-				throw new ArgumentException("Limit must be between 1 and 200");
-
-			var requestUrl = $"{_config.ItunesApiSearchUri}?term={term}&entity={searchEntity}&limit={limit}";
-
 			using (var httpClient = new HttpClient())
 			{
+				var requestUrl = $"{_config.ItunesApiSearchUri}?term={term}&entity={searchEntity}&limit={limit}";
+
 				using(var response = httpClient.GetAsync(requestUrl).Result)
 				{
 					if(!response.IsSuccessStatusCode)

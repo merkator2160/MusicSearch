@@ -22,9 +22,20 @@ namespace MusicSearch.Forms
 		// HANDLERS ///////////////////////////////////////////////////////////////////////////////
 		private async void SearchBtn_Click(Object sender, EventArgs e)
 		{
-			var albums = await _searchService.GetGroupAlbumsAsync(QueryTb.Text.Trim());
+			try
+			{
+				var albums = await _searchService.GetGroupAlbumsAsync(QueryTb.Text.Trim(), 200);
 
-			SearchResultTb.Text = PrepareAlbumsToPrint(albums);
+				SearchResultTb.Text = PrepareAlbumsToPrint(albums);
+			}
+			catch (AggregateException ex)
+			{
+				SearchResultTb.Text = "Sorry but network unavailable and cache is empty!";
+			}
+			catch (Exception ex)
+			{
+				SearchResultTb.Text = ex.Message;
+			}
 		}
 
 
